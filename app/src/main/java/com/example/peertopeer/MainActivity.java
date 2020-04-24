@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    //Sending the user to MyLibrary class
+    //Sending the user to other activities or fragments
     public  void goA(View g)
     {
         Intent i=new Intent(this,RentABook.class);
@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public  void goC(View g)
     {
-      Intent i=new Intent(this,BookShop.class);
-     startActivity(i);}
+        Intent i=new Intent(this,BookShop.class);
+        startActivity(i);
+    }
+
+
 }
