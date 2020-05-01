@@ -15,7 +15,7 @@ public class MyLibrary extends AppCompatActivity {
     }
     public  void add(View g)
     {
-        Intent i=new Intent(this,libraryFragment.class);
+        Intent i=new Intent(this,AddBook.class);
         startActivity(i);
     }
 }
