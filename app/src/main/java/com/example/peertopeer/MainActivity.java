@@ -66,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this,BookShop.class);
         startActivity(i);
     }
+    //public void goSettings(View s)
+   // {
+//        startActivity(i);
+  //  }
 
 
 }
