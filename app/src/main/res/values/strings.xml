@@ -11,7 +11,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="button">Button</string>
     <string name="library">Library</string>
-    <string name="rent_a_book">Rent A Book</string>
+    <string name="RentABook">Rent A Book</string>
     <string name="my_library">My Library</string>
     <string name="book_shop">Book Shop</string>
+    <string name="Rebt">Rent A Book</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -50,10 +50,26 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    //Sending the user to MyLibrary class
-    public  void go(View g)
+    //Sending the user to other activities or fragments
+    public  void goA(View g)
+    {
+        Intent i=new Intent(this,RentABook.class);
+        startActivity(i);
+    }
+    public  void goB(View g)
     {
         Intent i=new Intent(this,MyLibrary.class);
         startActivity(i);
     }
+    public  void goC(View g)
+    {
+        Intent i=new Intent(this,BookShop.class);
+        startActivity(i);
+    }
+    //public void goSettings(View s)
+   // {
+//        startActivity(i);
+  //  }
+
+
 }

@@ -8,22 +8,26 @@
     android:background="@drawable/sample_2"
     tools:context=".MainActivity">
 
- <ScrollView
-     android:layout_width="match_parent"
-     android:layout_height="match_parent">
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"></LinearLayout>
- </ScrollView>
+
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#335F81"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#335F81"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--&lt;!&ndash;        app:popupTheme="@style/AppTheme.PopupOverlay"-->
+        />
+
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -44,7 +48,9 @@
         android:layout_marginTop="83dp"
         android:layout_marginEnd="246dp"
         android:layout_marginBottom="598dp"
-        android:text="@string/rent_a_book"
+        android:onClick="goA"
+        android:text="@string/RentABook"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -60,8 +66,10 @@
         android:layout_marginTop="83dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="598dp"
+        android:onClick="goB"
         android:text="@string/my_library"
-        android:onClick="go"
+        android:textAllCaps="true"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toEndOf="@+id/button4"
@@ -74,7 +82,9 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="509dp"
+        android:onClick="goC"
         android:text="@string/book_shop"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/fab"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
