@@ -7,6 +7,9 @@
     android:background="@drawable/sample_1"
     tools:context=".MyLibrary">
 
+    <include
+        layout="@layout/custom_toolbar"/>
+
     <TextView
         android:id="@+id/mylibtxt"
         android:layout_width="90dp"

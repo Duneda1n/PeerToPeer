@@ -11,7 +11,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.DayNight" />
-    <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.DayNight" />
+    <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.NoActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.NoActionBar" />
 
 </resources>

@@ -7,6 +7,9 @@
     android:background="#D0B9F6CA"
     tools:context=".RentABook">
 
+    <include
+        layout="@layout/custom_toolbar"/>
+
     <TextView
         android:id="@+id/rentbktxt"
         android:layout_width="wrap_content"
