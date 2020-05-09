@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
+
             case R.id.action_settings:
                 Toast.makeText(this, "Settings option selected...", Toast.LENGTH_SHORT).show();
                 return true;
-
 
                 default:
                      return super.onOptionsItemSelected(item);

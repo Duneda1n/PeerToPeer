@@ -7,12 +7,15 @@ import android.os.Bundle;
 
 public class SettingsActivity extends AppCompatActivity {
 
-   //private Toolbar
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-       // toolbar = findViewById(R.id.)
+        toolbar = findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("Settings");
     }
 }
