@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class SettingsActivity extends AppCompatActivity {
 
-   // private Toolbar toolbar
+   //private Toolbar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

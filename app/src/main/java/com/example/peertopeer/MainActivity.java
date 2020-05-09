@@ -6,18 +6,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-
+    private  Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
 
        FloatingActionButton fab = findViewById(R.id.fab);
@@ -29,27 +31,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    //Adding menu on toolbar with inflator
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_main,menu);
+       return true;
     }
 
+    //  Action bar item clicks are being handled here.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Toast.makeText(this, "Settings option selected...", Toast.LENGTH_SHORT).show();
+                return true;
+
+
+                default:
+                     return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
     //Sending the user to other activities or fragments
     public  void goA(View g)
@@ -67,11 +69,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this,BookShop.class);
         startActivity(i);
     }
-    public void goSettings(View s)
-    {
-        Intent i=new Intent(this,SettingsActivity.class);
-        startActivity(i);
-    }
+//    public void goSettings(View s)
+//    {
+//        Intent i=new Intent(this,SettingsActivity.class);
+//        startActivity(i);
+//    }
 
 
 }
