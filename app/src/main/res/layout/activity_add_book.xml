@@ -8,6 +8,8 @@
         tools:context=".AddBook"
         android:background="@drawable/sample_1">
 
+    <include
+        layout="@layout/custom_toolbar"/>
 
         <Button
         android:id="@+id/button3"
