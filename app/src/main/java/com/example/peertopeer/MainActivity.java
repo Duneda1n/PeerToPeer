@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     //Adding menu on toolbar with inflator
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                      return super.onOptionsItemSelected(item);
         }
     }
+
     //Sending the user to other activities or fragments
     public  void goA(View g)
     {
