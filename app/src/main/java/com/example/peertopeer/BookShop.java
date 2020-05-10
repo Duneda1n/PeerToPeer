@@ -1,6 +1,7 @@
 package com.example.peertopeer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
@@ -25,8 +26,10 @@ public class BookShop extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_main,menu);
+        MenuItem searchItem = menu.findItem(R.id.search_bar);
         return true;
-    }
+
+        };
     //  Action bar item clicks are being handled here.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -42,4 +45,5 @@ public class BookShop extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 }

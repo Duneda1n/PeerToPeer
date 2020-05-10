@@ -3,9 +3,11 @@ package com.example.peertopeer;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.appcompat.widget.Toolbar;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.view.Menu;
         import android.view.MenuInflater;
+        import android.view.MenuItem;
 
 public class AddBook extends AppCompatActivity {
 
@@ -26,5 +28,20 @@ public class AddBook extends AppCompatActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_main,menu);
         return true;
+    }
+    //  Action bar item clicks are being handled here.
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId())
+        {
+
+            case R.id.action_settings:
+                startActivity(new Intent(this,Settings_Activity.class));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
