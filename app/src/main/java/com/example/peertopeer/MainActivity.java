@@ -43,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
+        switch (item.getItemId())
+        {
 
             case R.id.action_settings:
-                Toast.makeText(this, "Settings option selected...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Settings_Activity.class));
                 return true;
 
                 default:
@@ -69,11 +70,6 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this,BookShop.class);
         startActivity(i);
     }
-//    public void goSettings(View s)
-//    {
-//        Intent i=new Intent(this,SettingsActivity.class);
-//        startActivity(i);
-//    }
 
 
 }

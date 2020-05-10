@@ -5,7 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
-public class SettingsActivity extends AppCompatActivity {
+public class Settings_Activity extends AppCompatActivity {
 
     private Toolbar toolbar;
     @Override
@@ -17,5 +17,12 @@ public class SettingsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle("Settings");
+
+        if (findViewById(R.id.fragment_container)!=null)
+        {
+            if (savedInstanceState!=null)
+                return;
+                getFragmentManager().beginTransaction().add(R.id.fragment_container,new SettingsFragment()).commit();
+        }
     }
 }
