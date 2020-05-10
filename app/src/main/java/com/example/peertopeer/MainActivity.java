@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
         mDBHelper = new DatabaseHelper(this);
-
+        // Try and catch for basic functionalities for the DB
         try {
             mDBHelper.updateDataBase();
         } catch (IOException mIOException) {

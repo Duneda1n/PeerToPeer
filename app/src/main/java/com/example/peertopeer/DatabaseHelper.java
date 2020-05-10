@@ -12,14 +12,16 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    //This is the file name of our database
     private static String DB_NAME = "teamProjectDB.db";
+    // This is the path where the database is
     private static String DB_PATH = "C:\\Users\\alexs\\Downloads";
     private static final int DB_VERSION = 1;
 
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
-
+    // Gets a readable version of the database
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17)
@@ -32,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         this.getReadableDatabase();
     }
-
+    // Updates database
     public void updateDataBase() throws IOException {
         if (mNeedUpdate) {
             File dbFile = new File(DB_PATH + DB_NAME);
@@ -44,12 +46,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mNeedUpdate = false;
         }
     }
-
+    // Checks database and returns the desired file
     private boolean checkDataBase() {
         File dbFile = new File(DB_PATH + DB_NAME);
         return dbFile.exists();
     }
-
+    //This is the try catch of copy database
     private void copyDataBase() {
         if (!checkDataBase()) {
             this.getReadableDatabase();
@@ -61,7 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
     }
-
+    // This is for the buffer and to flush the stream
     private void copyDBFile() throws IOException {
         InputStream mInput = mContext.getAssets().open(DB_NAME);
         //InputStream mInput = mContext.getResources().openRawResource(R.raw.info);
