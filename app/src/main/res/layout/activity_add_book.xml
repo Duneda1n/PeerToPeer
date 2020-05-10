@@ -9,7 +9,8 @@
         android:background="@drawable/sample_1">
 
     <include
-        layout="@layout/custom_toolbar"/>
+        android:id="@+id/include2"
+        layout="@layout/custom_toolbar" />
 
         <Button
         android:id="@+id/button3"
@@ -54,13 +55,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="125dp"
-        android:background="#76FFFFFF"
         android:text="Add a book to your library"
         android:textColor="#000000"
         android:textSize="16dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/include2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
