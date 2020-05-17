@@ -6,6 +6,10 @@
           <option name="url" value="https://github.com/Duneda1n/PeerToPeer.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/alexstam123/MyMSSQLServerDatabaseConnection.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\alexs\AndroidStudioProjects" />
